@@ -1,6 +1,6 @@
 package com.company;
 
-public class Mental extends Player implements SuperPower {
+public class Mental extends Player implements Printable {
 
     private int attackType;
 
@@ -34,7 +34,7 @@ public class Mental extends Player implements SuperPower {
     }
 
     @Override
-    public void superPower() {
+    public void print() {
         System.out.println("Ударил мечом");
     }
 }

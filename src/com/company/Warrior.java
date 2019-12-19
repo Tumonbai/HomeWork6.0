@@ -1,6 +1,6 @@
 package com.company;
 
-public class Warrior extends Player implements SuperPower {
+public class Warrior extends Player implements Printable {
 
     private int hit;
 
@@ -25,7 +25,7 @@ public class Warrior extends Player implements SuperPower {
     }
 
     @Override
-    public void superPower() {
+    public void print() {
         System.out.println("\uD83D\uDD31");
     }
 }
