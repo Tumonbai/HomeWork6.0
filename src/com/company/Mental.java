@@ -1,8 +1,8 @@
 package com.company;
 
-public class Mental extends Player {
+public class Mental extends Player implements SuperPower {
 
-    private  int attackType;
+    private int attackType;
 
 
     public Mental(int health, int healthDamage) {
@@ -17,8 +17,24 @@ public class Mental extends Player {
     public void setAttackType(int attackType) {
         this.attackType = attackType;
     }
+
+    @Override
+    public int getHit() {
+        return 0;
+    }
+
+    @Override
+    public void setHit(int hit) {
+
+    }
+
     @Override
     public String printInfo() {
-        return super.printInfo()+ " attactype "+attackType;
+        return super.printInfo() + " attactype " + attackType;
+    }
+
+    @Override
+    public void superPower() {
+        System.out.println("Ударил мечом");
     }
 }

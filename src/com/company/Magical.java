@@ -1,6 +1,6 @@
 package com.company;
 
-public class Magical extends Player {
+public class Magical extends Player implements SuperPower {
 
     private  int attackType;
 
@@ -17,9 +17,25 @@ public class Magical extends Player {
     public void setAttackType(int attackType) {
         this.attackType = attackType;
     }
+
+    @Override
+    public int getHit() {
+        return 0;
+    }
+
+    @Override
+    public void setHit(int hit) {
+
+    }
+
     @Override
     public String printInfo() {
         return super.printInfo()+ " AttacType "+attackType;
+    }
+
+    @Override
+    public void superPower() {
+        System.out.println("Применил магическую силу");
     }
 }
 

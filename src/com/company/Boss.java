@@ -17,7 +17,17 @@ public class Boss extends Player {
     }
 
     @Override
+    public int getHit() {
+        return 0;
+    }
+
+    @Override
+    public void setHit(int hit) {
+
+    }
+
+    @Override
     public String printInfo() {
-       return super.printInfo()+ " Defence "+defence;
+        return super.printInfo() + " Defence " + defence;
     }
 }

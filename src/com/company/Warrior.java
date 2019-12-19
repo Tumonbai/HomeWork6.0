@@ -1,8 +1,6 @@
 package com.company;
 
-import com.company.Player;
-
-public class Warrior extends Player {
+public class Warrior extends Player implements SuperPower {
 
     private int hit;
 
@@ -11,14 +9,23 @@ public class Warrior extends Player {
         super.setDamage(healthDamage);
     }
 
+    @Override
     public int getHit() {
         return hit;
     }
 
+    @Override
     public void setHit(int hit) {
         this.hit = hit;
     }
+
     @Override
     public String printInfo() {
-        return super.printInfo()+ " Hit "+hit;
-    }}
+        return super.printInfo() + " Hit " + hit;
+    }
+
+    @Override
+    public void superPower() {
+        System.out.println("\uD83D\uDD31");
+    }
+}

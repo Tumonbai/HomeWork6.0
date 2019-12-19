@@ -1,6 +1,6 @@
 package com.company;
 
-public class Player {
+public abstract class Player {
 
     private int Health;
     private int Damage;
@@ -23,7 +23,12 @@ public class Player {
     public void setDamage(int damage) {
         Damage = damage;
     }
-    public String printInfo(){
-        return "Health "+getHealth()+ " Damage "+ getDamage();
+
+    public abstract int getHit();
+
+    public abstract void setHit(int hit);
+
+    public String printInfo() {
+        return "Health " + getHealth() + " Damage " + getDamage();
     }
 }
